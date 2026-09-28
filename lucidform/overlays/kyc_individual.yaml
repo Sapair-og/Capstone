@@ -1,0 +1,109 @@
+# Semantic overlay for the individual KYC form (paper §IV-A).
+# PDF structure gives field identity, widget type and max length; everything here is meaning the
+# PDF cannot carry. Swapping forms = authoring a new overlay, not changing code.
+form_id: kyc_individual
+title: Individual KYC Application
+confidence_threshold: 0.6
+fields:
+  - field_id: full_name
+    kind: name
+    max_length: 60
+    prompt: "What is your full name, as written on your PAN card?"
+    gloss: "Your first name and surname. Your surname is your family name, usually the last word."
+    prompt_hi: "आपका पूरा नाम क्या है, जैसा आपके पैन कार्ड पर लिखा है?"
+    gloss_hi: "आपका पहला नाम और उपनाम। उपनाम आपका पारिवारिक नाम होता है।"
+    cross: [{rule: surname_pan, with: pan}]
+  - field_id: dob
+    kind: date
+    exact_length: 10
+    readback: date
+    min_age: 18
+    max_age: 120
+    prompt: "What is your date of birth? Day, month, then year."
+    gloss: "The day you were born. You can find it on your Aadhaar or PAN card."
+    prompt_hi: "आपकी जन्म तिथि क्या है? दिन, महीना, फिर साल।"
+  - field_id: gender
+    kind: enum
+    options: [Male, Female, Transgender]
+    aliases: {m: Male, man: Male, purush: Male, f: Female, woman: Female, mahila: Female, t: Transgender}
+    prompt: "What is your gender: male, female, or transgender?"
+    prompt_hi: "आपका लिंग क्या है: पुरुष, महिला, या ट्रांसजेंडर?"
+  - field_id: parent_name
+    kind: name
+    max_length: 60
+    prompt: "What is your father's or mother's full name?"
+    gloss: "The full name of one of your parents, as used on official documents."
+    prompt_hi: "आपके पिता या माता का पूरा नाम क्या है?"
+  - field_id: pan
+    kind: pan
+    exact_length: 10
+    pattern: "^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$"
+    readback: chars
+    prompt: "What is your PAN number? It has ten letters and numbers."
+    gloss: "PAN is the Permanent Account Number printed on your PAN card from the Income Tax Department. It looks like five letters, four numbers, then one letter."
+    prompt_hi: "आपका पैन नंबर क्या है? इसमें दस अक्षर और अंक होते हैं।"
+    gloss_hi: "पैन आपके पैन कार्ड पर छपा स्थायी खाता संख्या है। पाँच अक्षर, चार अंक, फिर एक अक्षर।"
+    cross: [{rule: pan_surname, with: full_name}]
+  - field_id: aadhaar
+    kind: aadhaar
+    exact_length: 12
+    pattern: "^[2-9][0-9]{11}$"
+    checksum: verhoeff
+    readback: digits
+    prompt: "What is your Aadhaar number? It has twelve digits."
+    gloss: "Aadhaar is the twelve-digit number on your Aadhaar card, printed in three groups of four."
+    prompt_hi: "आपका आधार नंबर क्या है? इसमें बारह अंक होते हैं।"
+  - field_id: address
+    kind: text
+    max_length: 120
+    pattern: "^[A-Za-z0-9][A-Za-z0-9 ,./#()'&-]*$"
+    prompt: "What is your house address? House number, street, and area."
+    gloss: "Where you live now: house or flat number, street name, and locality."
+    prompt_hi: "आपका घर का पता क्या है? मकान नंबर, गली और इलाका।"
+  - field_id: city
+    kind: city
+    max_length: 40
+    prompt: "Which city or town do you live in?"
+    prompt_hi: "आप किस शहर या कस्बे में रहते हैं?"
+  - field_id: state
+    kind: enum
+    options_from: STATES
+    prompt: "Which state do you live in?"
+    prompt_hi: "आप किस राज्य में रहते हैं?"
+    cross: [{rule: state_pincode, with: pincode}]
+  - field_id: pincode
+    kind: pincode
+    exact_length: 6
+    pattern: "^[1-9][0-9]{5}$"
+    readback: digits
+    prompt: "What is your area PIN code? It has six digits."
+    gloss: "The PIN code is the six-digit postal code for your area. It is on letters and bills sent to your home."
+    prompt_hi: "आपका पिन कोड क्या है? इसमें छह अंक होते हैं।"
+    cross: [{rule: pincode_state, with: state}]
+  - field_id: mobile
+    kind: mobile
+    exact_length: 10
+    pattern: "^[6-9][0-9]{9}$"
+    readback: digits
+    prompt: "What is your mobile number? Ten digits."
+    prompt_hi: "आपका मोबाइल नंबर क्या है? दस अंक।"
+  - field_id: email
+    kind: email
+    max_length: 60
+    required: false
+    pattern: "^[a-z0-9._%+-]+@[a-z0-9-]+(\\.[a-z0-9-]+)*\\.[a-z]{2,}$"
+    readback: chars
+    prompt: "What is your email address? You can say skip if you don't have one."
+    prompt_hi: "आपका ईमेल पता क्या है? अगर नहीं है तो 'छोड़ें' कहें।"
+  - field_id: occupation
+    kind: enum
+    options: [Salaried, Self-Employed, Business, Student, Homemaker, Retired, Agriculture, Other]
+    aliases: {job: Salaried, service: Salaried, naukri: Salaried, farmer: Agriculture, kisan: Agriculture, kheti: Agriculture, housewife: Homemaker, grihini: Homemaker, self employed: Self-Employed, shop: Business, dukaan: Business}
+    prompt: "What work do you do? For example salaried job, business, farming, student, homemaker, or retired."
+    prompt_hi: "आप क्या काम करते हैं? जैसे नौकरी, व्यापार, खेती, छात्र, गृहिणी, या सेवानिवृत्त।"
+  - field_id: income_band
+    kind: enum
+    options: ["Below 1 Lakh", "1-5 Lakh", "5-10 Lakh", "10-25 Lakh", "Above 25 Lakh"]
+    prompt: "What is your yearly income? Below 1 lakh, 1 to 5 lakh, 5 to 10 lakh, 10 to 25 lakh, or above 25 lakh."
+    gloss: "Total money you earn in one year, from all work, before tax."
+    prompt_hi: "आपकी सालाना आमदनी कितनी है?"

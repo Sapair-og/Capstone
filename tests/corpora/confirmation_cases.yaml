@@ -1,0 +1,59 @@
+# Adversarial corpus for the confirmation parser (paper §IV-C). 49 cases, 7 categories.
+# 13 controls must confirm (guards against a parser that "passes" by refusing everything).
+cases:
+  # controls: explicit affirmation -----------------------------------------------------------
+  - {id: af01, cat: affirm, u: "yes", expect: true}
+  - {id: af02, cat: affirm, u: "Yes.", expect: true}
+  - {id: af03, cat: affirm, u: "yes, that's correct", expect: true}
+  - {id: af04, cat: affirm, u: "Correct!", expect: true}
+  - {id: af05, cat: affirm, u: "haan", expect: true}
+  - {id: af06, cat: affirm, u: "haan ji", expect: true}
+  - {id: af07, cat: affirm, u: "haan, sahi hai", expect: true}
+  - {id: af08, cat: affirm, u: "bilkul", expect: true}
+  - {id: af09, cat: affirm, u: "that is right", expect: true}
+  - {id: af10, cat: affirm, u: "um, yes", expect: true}
+  - {id: af11, cat: affirm, u: "YES CORRECT", expect: true}
+  - {id: af12, cat: affirm, u: "हाँ सही है", expect: true}
+  - {id: af13, cat: affirm, u: "confirmed", expect: true}
+  # explicit negation ------------------------------------------------------------------------
+  - {id: ng01, cat: negation, u: "no", expect: false}
+  - {id: ng02, cat: negation, u: "nahi", expect: false}
+  - {id: ng03, cat: negation, u: "that's wrong", expect: false}
+  - {id: ng04, cat: negation, u: "galat hai", expect: false}
+  - {id: ng05, cat: negation, u: "no, it's 462026", expect: false}
+  - {id: ng06, cat: negation, u: "not correct", expect: false}
+  - {id: ng07, cat: negation, u: "wait", expect: false}
+  # hedging ----------------------------------------------------------------------------------
+  - {id: hg01, cat: hedge, u: "I think so", expect: false}
+  - {id: hg02, cat: hedge, u: "maybe yes", expect: false}
+  - {id: hg03, cat: hedge, u: "probably correct", expect: false}
+  - {id: hg04, cat: hedge, u: "yes I guess", expect: false}
+  - {id: hg05, cat: hedge, u: "shayad haan", expect: false}
+  - {id: hg06, cat: hedge, u: "I'm not sure", expect: false}
+  # acknowledgement is not agreement ---------------------------------------------------------
+  - {id: ak01, cat: acknowledgement, u: "okay", expect: false}
+  - {id: ak02, cat: acknowledgement, u: "ok", expect: false}
+  - {id: ak03, cat: acknowledgement, u: "acha", expect: false}
+  - {id: ak04, cat: acknowledgement, u: "hmm", expect: false}
+  - {id: ak05, cat: acknowledgement, u: "theek hai", expect: false}
+  - {id: ak06, cat: acknowledgement, u: "fine", expect: false}
+  # affirmation spoofing: affirmative token present, consent withheld ------------------------
+  - {id: sp01, cat: spoofing, u: "yes, I know that's wrong", expect: false}
+  - {id: sp02, cat: spoofing, u: "yes but the last digit is 5", expect: false}
+  - {id: sp03, cat: spoofing, u: "yes no", expect: false}
+  - {id: sp04, cat: spoofing, u: "correct me if I'm wrong", expect: false}
+  - {id: sp05, cat: spoofing, u: "right, that's not it", expect: false}
+  - {id: sp06, cat: spoofing, u: "haan, galat hai", expect: false}
+  - {id: sp07, cat: spoofing, u: "yes, I heard you", expect: false}
+  # substring traps: affirmative token inside an unrelated word ------------------------------
+  - {id: st01, cat: substring_trap, u: "yesterday", expect: false}
+  - {id: st02, cat: substring_trap, u: "corrections please", expect: false}
+  - {id: st03, cat: substring_trap, u: "the light is too bright", expect: false}
+  - {id: st04, cat: substring_trap, u: "haandi mein daal do", expect: false}
+  - {id: st05, cat: substring_trap, u: "my eyes are weak", expect: false}
+  - {id: st06, cat: substring_trap, u: "Copyright", expect: false}
+  # noise / off-task -------------------------------------------------------------------------
+  - {id: nz01, cat: noise, u: "", expect: false}
+  - {id: nz02, cat: noise, u: "what is a PIN code?", expect: false}
+  - {id: nz03, cat: noise, u: "462026", expect: false}
+  - {id: nz04, cat: noise, u: "can you repeat that", expect: false}
