@@ -1,5 +1,7 @@
 # Team workflow (2+ people, each with their own Claude)
 
+> New here? Read **docs/TEAM_GUIDE.md** first (phase split, setup, graphify token-saving). This file is the short command reference.
+
 Your Claude accounts don't share memory or projects, so **the repo is the only shared brain**.
 Everything an agent needs lives in `AGENTS.md`, `ROADMAP.md`, `docs/PROGRESS.md`, and the
 graphify graph.

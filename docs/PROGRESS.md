@@ -8,3 +8,9 @@ Append-only. Add the newest entry at the bottom. Each entry covers: who, phase, 
 - **Also:** added AGENTS.md, CLAUDE.md, CONTRIBUTING.md, the graphify config, and the owner/dependency columns in ROADMAP.
 - **Next:** Phase 2 (form/PDF) and Phase 3 (extraction) are independent and can run in parallel.
 - **Gotchas:** pypdf's high-level `get_fields()` drops `/MaxLen` (paper §IV-A), so Phase 2 has to walk `/Annots` widgets directly. The receipt frame-guard only catches accidental misuse. Deliberate bypass is caught by `tests/archcheck.py`.
+
+---
+### 2026-09-28 · Yash (+Claude) · team setup
+- Pushed main (8a6bb5b) from a local Windows clone. Added `docs/TEAM_GUIDE.md`.
+- Final split: Yash P2 → P6 → P7, teammate P3 → P4 → P5 (the harder phases). P6 now depends only on P2, so it runs in parallel with P4.
+- **Next:** round 1 — P2 (Yash) and P3 (teammate) in parallel.

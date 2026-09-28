@@ -1,6 +1,6 @@
 # AGENTS.md — handoff for any AI agent (Claude, Codex, Cursor, Gemini…) or new teammate
 
-Read this file, then `ROADMAP.md`, then `docs/PROGRESS.md`. If `graphify-out/GRAPH_REPORT.md`
+Read this file, then `ROADMAP.md` (humans: `docs/TEAM_GUIDE.md`), then `docs/PROGRESS.md`. If `graphify-out/GRAPH_REPORT.md`
 exists, read it before opening source files and prefer `graphify query "<question>"` /
 `graphify explain "<Symbol>"` over grepping.
 
