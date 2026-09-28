@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lucidform"
+version = "0.1.0"
+description = "Deterministically gated, LLM-assisted form filling for low-literacy and visually-impaired users"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+pdf = ["pypdf>=3", "reportlab>=4"]
+llm = ["anthropic>=0.40"]
+agent = ["langgraph>=0.2"]
+
+[tool.setuptools.packages.find]
+include = ["lucidform*"]
+
+[tool.setuptools.package-data]
+lucidform = ["overlays/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
