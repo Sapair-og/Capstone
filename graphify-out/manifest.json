@@ -1,0 +1,272 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1790599592.9302993,
+    "seen": 1790599597.7044592,
+    "ast_hash": "3ac995fbf93552a991ecab9b63f776aa",
+    "semantic_hash": ""
+  },
+  "lucidform/__init__.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.704464,
+    "ast_hash": "b3879c16dc01e67618912ba509926ea0",
+    "semantic_hash": ""
+  },
+  "lucidform/checksums.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044656,
+    "ast_hash": "4b2171693d606ec9721786039b144ceb",
+    "semantic_hash": ""
+  },
+  "lucidform/confirmation.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044673,
+    "ast_hash": "c73c5bf372c5b2fa8551aad608c44f4c",
+    "semantic_hash": ""
+  },
+  "lucidform/events.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044683,
+    "ast_hash": "f9255dbcd6e30e177acaa5879b1a84f1",
+    "semantic_hash": ""
+  },
+  "lucidform/fingerprint.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044692,
+    "ast_hash": "b7532a9636d94ef5854f178d69bfe1a1",
+    "semantic_hash": ""
+  },
+  "lucidform/form_state.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044702,
+    "ast_hash": "505030f2de34cfa53c3c4cbbcfad3865",
+    "semantic_hash": ""
+  },
+  "lucidform/normalize.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.704471,
+    "ast_hash": "033385b373202dc8d352e7c45ecdcbf7",
+    "semantic_hash": ""
+  },
+  "lucidform/overlays/__init__.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044723,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "lucidform/readback.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044735,
+    "ast_hash": "07e470a61e274e18ea1a93a5489be917",
+    "semantic_hash": ""
+  },
+  "lucidform/rules_data.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044744,
+    "ast_hash": "5ae339157a76ed9ef1f24106efe36865",
+    "semantic_hash": ""
+  },
+  "lucidform/spec.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044754,
+    "ast_hash": "ee15ae3749cba93131699a5dc905dab3",
+    "semantic_hash": ""
+  },
+  "lucidform/types.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044764,
+    "ast_hash": "8daca59be1919d19772dbc1eb0257ab6",
+    "semantic_hash": ""
+  },
+  "lucidform/validation.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044787,
+    "ast_hash": "f344c178612c42603599470947b65474",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.70448,
+    "ast_hash": "24dd7a11570d2734c740a839db91a5b1",
+    "semantic_hash": ""
+  },
+  "tests/archcheck.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.704481,
+    "ast_hash": "4c5f6614940f5aa8128261a3dcf02982",
+    "semantic_hash": ""
+  },
+  "tests/conftest.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044823,
+    "ast_hash": "acb02744a44588474f544c0e615a547b",
+    "semantic_hash": ""
+  },
+  "tests/test_architecture.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.704483,
+    "ast_hash": "2642d23597f89d5ae282ca6a071226f1",
+    "semantic_hash": ""
+  },
+  "tests/test_commit_path.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044837,
+    "ast_hash": "4d118ef79c291acebd489d5a2a99573d",
+    "semantic_hash": ""
+  },
+  "tests/test_confirmation_corpus.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044847,
+    "ast_hash": "932d4aef107cba1d6b815f352034de73",
+    "semantic_hash": ""
+  },
+  "tests/test_gate_corpus.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044857,
+    "ast_hash": "bb8c578b0e80ebdfd571bdc35bdb48a2",
+    "semantic_hash": ""
+  },
+  "tests/test_units.py": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7044864,
+    "ast_hash": "a79982f2031a8a61f7db7c184e46aff1",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1790599592.9194937,
+    "seen": 1790599597.7044876,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/SKILL.md": {
+    "mtime": 1790599592.914484,
+    "seen": 1790599597.7044888,
+    "ast_hash": "b62ef33ed17cc71aae20f3ff9ce1a943",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/add-watch.md": {
+    "mtime": 1790599583.0903115,
+    "seen": 1790599597.70449,
+    "ast_hash": "c1f65eb4102ad515149303c7f296b718",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/exports.md": {
+    "mtime": 1790599583.0903115,
+    "seen": 1790599597.7044904,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1790599583.0903115,
+    "seen": 1790599597.7044916,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1790599583.0903115,
+    "seen": 1790599597.7044923,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/hooks.md": {
+    "mtime": 1790599583.0903115,
+    "seen": 1790599597.7044933,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/query.md": {
+    "mtime": 1790599584.212991,
+    "seen": 1790599597.7044938,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/transcribe.md": {
+    "mtime": 1790599584.2139895,
+    "seen": 1790599597.7044945,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/update.md": {
+    "mtime": 1790599584.2139895,
+    "seen": 1790599597.7044954,
+    "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
+    "semantic_hash": ""
+  },
+  ".github/pull_request_template.md": {
+    "mtime": 1790599404.0381155,
+    "seen": 1790599597.7044964,
+    "ast_hash": "2e40f5d605a3cf3330662eb87e948cfb",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1790599404.0381155,
+    "seen": 1790599597.7044973,
+    "ast_hash": "17db828e2e26ad049a5cedb0bb187338",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1790599404.0381155,
+    "seen": 1790599597.7044985,
+    "ast_hash": "2a5c23acc049ee6189374d8d64cfe611",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1790599592.9278336,
+    "seen": 1790599597.7044992,
+    "ast_hash": "1ce70d584d6af3b8dae3d80139372124",
+    "semantic_hash": ""
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1790599404.0381155,
+    "seen": 1790599597.7045002,
+    "ast_hash": "901515dabb93c14bf13a73ed70cfb7db",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1790599404.0381155,
+    "seen": 1790599597.704501,
+    "ast_hash": "2714947a278a4bcf3a89293c59ac3817",
+    "semantic_hash": ""
+  },
+  "ROADMAP.md": {
+    "mtime": 1790599404.0381155,
+    "seen": 1790599597.7045019,
+    "ast_hash": "2a418e9eab2c8984f26a9624f4d194e4",
+    "semantic_hash": ""
+  },
+  "docs/PROGRESS.md": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7045026,
+    "ast_hash": "043f82708cfd177dab21ea548d34b282",
+    "semantic_hash": ""
+  },
+  "lucidform/overlays/kyc_individual.yaml": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7045035,
+    "ast_hash": "c165b9af4e6f6c48f2380cfc7828218b",
+    "semantic_hash": ""
+  },
+  "tests/corpora/confirmation_cases.yaml": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7045043,
+    "ast_hash": "cbe67390a9d7672dd19cc6f93ec01cb1",
+    "semantic_hash": ""
+  },
+  "tests/corpora/gate_cases.yaml": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.7045057,
+    "ast_hash": "0d4ae5f2544fafa84554f23b38c4cc44",
+    "semantic_hash": ""
+  },
+  "docs/paper/capstone_paper.pdf": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.704507,
+    "ast_hash": "0a01b110c7929e90f584a152d8a00686",
+    "semantic_hash": ""
+  },
+  "docs/paper/workflow_diagram.pdf": {
+    "mtime": 1790599404.0539973,
+    "seen": 1790599597.704508,
+    "ast_hash": "51a020db7941739dacd3317fa641ace6",
+    "semantic_hash": ""
+  }
+}
