@@ -1,0 +1,6 @@
+# keep the graph about the system, not generated artefacts
+graphify-out/
+out/
+logs/
+*.egg-info/
+.venv/
